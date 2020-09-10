@@ -1,19 +1,23 @@
+import java.util.Scanner;
 
 public class Driver 
 {
 	public static void main(String[] args)
 	{
-		String s = "Matthew";
-		String vowels = "aeiouAEIOU";
+		Scanner input = new Scanner(System.in);
+		System.out.print("Enter something: ");
+		String val = input.nextLine();
 		int count = 0;
-		
-		for(int i = 0; i < s.length(); i++)
+		String vowels = "aeiouAEIOU";
+		for(int i = 0; i < val.length(); i++)
 		{
-			if(vowels.indexOf(s.charAt(i)) != -1)
+			if(vowels.indexOf(val.charAt(i)) != -1)
 			{
 				count++;
 			}
 		}
 		System.out.println(count);
+		input.close();
 	}
+		
 }
